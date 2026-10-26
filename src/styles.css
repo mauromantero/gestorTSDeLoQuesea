@@ -6,17 +6,82 @@
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
-    background-color: #f1f5f9;
+    background-color: #27548A;
     color: #334155;
     padding: 20px;
 }
 
-.container {
-    max-width: 500px;
+.title {
+    text-align: center;
     margin: 0 auto;
-    display: flex;
+    font-family: Inquisicion;
+    font-size: 50px;
+}
+
+.general{
+    max-width: 500px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0px;
     flex-direction: column;
     gap: 20px;
+
+}
+
+.container {  display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 20px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Controls Controls Controls Controls"
+    "Mascotas Mascotas Mascotas Mascotas";
+}
+
+.Mascotas {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 49px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Animal1 . ."
+    "Animal1 . ."
+    "Animal1 . .";
+    grid-area: Mascotas;
+    text-align: center;
+    align-content: center;
+}
+
+.Animal1 { grid-area: Animal1; }
+
+.Controls {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". Titol ."
+    "Formulari Buscador Buscador"
+    "Formulari Buscador Buscador";
+    grid-area: Controls;
+    align-items: flex-start;
+}
+
+.Formulari { grid-area: Formulari; }
+
+.Titol { grid-area: Titol; }
+
+.Buscador { grid-area: Buscador; }
+
+
+
+
+.sep1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1000px;
 }
 
 h1 {
@@ -25,8 +90,15 @@ h1 {
 }
 
 .card {
-    background: white;
+    background: #DDA853;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card2 {
+    background: #DDA853;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -109,4 +181,37 @@ button:hover {
 
 .btn-esborrar:hover {
     background-color: #dc2626;
+}
+
+
+.info{
+    font-family: Melon;
+}
+
+@font-face {
+    font-family: Sans;
+    src: url('./Font/Sans/Qdbettercomicsans-jEEeG.ttf');
+}
+
+@font-face {
+    font-family: Inquisicion;
+    src: url('./Font/the_inquisition/Dolor.ttf');
+}
+
+@font-face {
+    font-family: Melon;
+    src: url('./Font/melon_tea/Melon Tea.otf');
+}
+
+
+.botonesinfo{
+    width: auto;
+    margin: 1px;
+}
+
+.casas{
+    background: #7c5f30;
+    /*padding: 10px;*/
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }

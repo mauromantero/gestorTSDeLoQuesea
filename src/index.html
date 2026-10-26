@@ -7,43 +7,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
 <div class="container">
-    <h1>Gestor d'Elements</h1>
 
-    <!-- Formulari d'entrada de dades -->
-    <div class="card">
-        <h2>Afegir Nou Element</h2>
 
-        <div class="field">
-            <label for="iNom">Nom / Títol:</label>
-            <input type="text" id="iNom" placeholder="Escriu un nom...">
+    <div class="Controls">
+
+        <div class="Titol"> <h1 class="title"> La bicho aventura (suspendeme) </h1></div>
+
+        <div class="Formulari">
+
+            <div class="card">
+                <h2>Crea a tu bicho</h2>
+                <div class="field">
+                    <label for="iNom">Nombre:</label>
+                    <input type="text" id="iNom" placeholder="Escribe el nombre de tu criatura">
+                </div>
+
+                <div class="field">
+                    <label for="imatge">Apariéncia:</label>
+                    <input type="file" id="imatge">
+                </div>
+
+                <div class="field">
+                    <label for="iEdad">Edad:</label>
+                    <input type="number" id="iEdad" value="0">
+                </div>
+                <h2>¿Está vivo?</h2>
+                <div class="field-checkbox">
+                    <label>
+                        <input type="checkbox" id="cVida"> Si
+                    </label>
+                </div>
+
+                <button id="btnAfegir">Afegir a la Llista</button>
+
+            </div>
+    </div>
+
+        <div class="Buscador">
+
+            <div class="card">
+                <h2>Ordenar</h2>
+                <button onclick="Ordenar()" style="margin:10px">Ordenar Nombres</button>
+                <button onclick="OrdenarFel()" style="margin:10px">Ordenar Felicidad</button>
+                <button onclick="OrdenarHam()" style="margin:10px">Ordenar Hambre</button>
+                <div id="Ordenable">
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="field">
-            <label for="sCategoria">Categoria:</label>
-            <select id="sCategoria">
-                <option value="Opció A">Opció A</option>
-                <option value="Opció B">Opció B</option>
-                <option value="Opció C">Opció C</option>
-            </select>
-        </div>
+    </div>
 
-        <div class="field">
-            <label for="iValor">Valor / Preu / Punts:</label>
-            <input type="number" id="iValor" value="0">
-        </div>
+    <div class="Mascotas info" id="contenedorAnim">
 
-        <div class="field-checkbox">
-            <label>
-                <input type="checkbox" id="cEstat"> Actiu / Completat
-            </label>
-        </div>
-
-        <button id="btnAfegir">Afegir a la Llista</button>
     </div>
 
 </div>
 
 <script src="app.js"></script>
+
 </body>
 </html>
