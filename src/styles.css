@@ -30,28 +30,27 @@ body {
 
 .container {  display: grid;
     align-items: flex-start;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr ;
     /*grid-auto-rows: 1fr;*/
     gap: 20px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-    "Controls Controls Controls Controls"
-    "Mascotas Mascotas Mascotas Mascotas";
+    "Controls"
+    "Mascotas";
 }
 
-.Mascotas {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 49px 10px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "Animal1 . ."
-    "Animal1 . ."
-    "Animal1 . .";
-    grid-area: Mascotas;
+
+.Mascotas {
+
+    display: grid;
+    gap: 16px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    grid-auto-columns: 450px;
+    align-items: center;
     text-align: center;
-    align-content: center;
 }
 
 .Animal1 { grid-area: Animal1; }
@@ -76,7 +75,10 @@ body {
 .Buscador { grid-area: Buscador; }
 
 
-
+.DivSecreto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .sep1{
     display: grid;
@@ -133,6 +135,18 @@ select {
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 0.95rem;
+}
+
+
+.secretbutton {
+    width: auto;
+    background-color: #dda853;
+    border: none;
+    cursor: pointer;
+}
+
+.secretbutton:hover {
+    background-color: #dda853;
 }
 
 button {
@@ -214,4 +228,66 @@ button:hover {
     /*padding: 10px;*/
     border-radius: 10px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/*.botoneleccion{*/
+/*    text-align: center;*/
+/*    width: auto;*/
+/*    align-items: center;*/
+/*    align-content: center;*/
+/*}*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(62 20 20); /* Fallback color */
+    background-color: rgb(62 20 20); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.5s;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    /*align-items: center;*/
+    /*align-content: center;*/
+}
+
+.modal-content {
+    position: fixed;
+    bottom: 500px;
+    background-color: #000000;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 500px; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 500px; opacity: 1}
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }

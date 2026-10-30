@@ -1,5 +1,6 @@
 "use strict";
 let numcasa = 0;
+const modal = document.getElementById("myModal");
 //Cream la instància
 let animal;
 // Cream una llista d'elements
@@ -164,4 +165,22 @@ function OrdenarHam() {
 function OrdenarEdad() {
     ListaAnimals.sort((a, b) => b.valor - a.valor);
     actualitzarUI();
+}
+function fade() {
+    modal.style.display = "block";
+}
+function respuesta1() {
+    let texto1 = document.getElementById('v1');
+    let texto2 = document.getElementById('v2');
+    let sec = document.getElementById('secreto');
+    let resp1 = document.getElementById('r1');
+    let resp2 = document.getElementById('r2');
+    texto1.innerText = 'Pronto lo sabrás';
+    texto2.innerText = '';
+    resp1.style.display = 'none';
+    resp2.style.display = 'none';
+    setTimeout(() => {
+        modal.style.display = "none";
+        sec.style.display = 'none';
+    }, 1500);
 }

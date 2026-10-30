@@ -19,7 +19,12 @@
         <div class="Formulari">
 
             <div class="card">
+                <div class="DivSecreto">
+
                 <h2>Crea a tu bicho</h2>
+                <button onclick="fade()" class="secretbutton" id="secreto" ></button>
+
+                </div>
                 <div class="field">
                     <label for="iNom">Nombre:</label>
                     <input type="text" id="iNom" placeholder="Escribe el nombre de tu criatura">
@@ -70,6 +75,22 @@
 
     <div class="Mascotas info" id="contenedorAnim">
 
+    </div>
+
+</div>
+
+<div id="myModal" class="modal" style="justify-content:center;">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header" style="text-align: center;">
+            <h2 style="color: white" id="v1">¿Cómo me has encontrado?</h2>
+        </div>
+        <div class="modal-body">
+            <p style="color: white; text-align: center " id="v2">Esto no deberia de estar pasando...</p>
+            <button class="botoneleccion" style="background-color: #1b0707" onclick="respuesta1()" id="r1">¿Quién eres?</button>
+            <button class="botoneleccion" style="background-color: #1b0707"  id="r2"><a href="index2.html">¡Dejame salir!</a></button>
+        </div>
     </div>
 
 </div>

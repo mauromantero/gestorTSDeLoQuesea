@@ -18,6 +18,8 @@ interface Animals {
     energia: number;
 }
 
+const modal = document.getElementById("myModal") as HTMLElement;
+
 //Cream la instància
 let animal : Animals;
 
@@ -25,12 +27,15 @@ let animal : Animals;
 
 let ListaAnimals: Animals[] = [];
 
+
 // 2. Funció per llegir el formulari i afegir un nou element a l'array
 function afegirElement(): void {
     const inputNom = document.getElementById('iNom') as HTMLInputElement;
     const selectCategoria = document.getElementById('imatge') as HTMLInputElement;
     const inputValor = document.getElementById('iEdad') as HTMLInputElement;
     const checkEstat = document.getElementById('cVida') as HTMLInputElement;
+
+
 
     animal = {
         nom: inputNom.value,
@@ -215,8 +220,6 @@ function Jugar(animal:number) {
     actualitzarUI()
 }
 
-
-
 function Ordenar(){
 
    ListaAnimals.sort((a, b) => a.nom.localeCompare(b.nom));
@@ -243,3 +246,28 @@ function OrdenarEdad(){
     actualitzarUI()
 
 }
+
+function fade(){
+    modal.style.display = "block";
+}
+
+function respuesta1(){
+    let texto1 = document.getElementById('v1') as HTMLElement;
+    let texto2 = document.getElementById('v2') as HTMLElement;
+    let sec = document.getElementById('secreto') as HTMLElement;
+    let resp1 = document.getElementById('r1') as HTMLElement;
+    let resp2 = document.getElementById('r2') as HTMLElement;
+
+    texto1.innerText = 'Pronto lo sabrás'
+    texto2.innerText = ''
+    resp1.style.display = 'none'
+    resp2.style.display = 'none'
+
+    setTimeout(() =>{
+        modal.style.display = "none";
+        sec.style.display = 'none'
+    }, 1500)
+
+
+}
+
