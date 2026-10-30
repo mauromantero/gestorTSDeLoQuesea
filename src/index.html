@@ -27,7 +27,12 @@
 
                 <div class="field">
                     <label for="imatge">Apariéncia:</label>
-                    <input type="file" id="imatge">
+                    <select id="imatge">
+                        <option value="Opción Z">Elije una opción </option>
+                        <option value="Opción A">Momonga</option>
+                        <option value="Opción B">Verity</option>
+                        <option value="Opción C">Spiderman</option>
+                    </select>
                 </div>
 
                 <div class="field">
@@ -53,6 +58,7 @@
                 <button onclick="Ordenar()" style="margin:10px">Ordenar Nombres</button>
                 <button onclick="OrdenarFel()" style="margin:10px">Ordenar Felicidad</button>
                 <button onclick="OrdenarHam()" style="margin:10px">Ordenar Hambre</button>
+                <button onclick="OrdenarEdad()" style="margin:10px">Ordenar Edad (Major - Menor)</button>
                 <div id="Ordenable">
 
                 </div>
